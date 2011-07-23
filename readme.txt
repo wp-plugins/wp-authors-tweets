@@ -49,6 +49,6 @@ Please visit the [WP Author's Tweets plugin page](http://www.webdesigncreare.co.
 == Upgrade Notice ==
 
 = 0.1 =
-This version fixes a security related bug.  Upgrade immediately.
+This version allows you to customise the latest tweet feed slightly more and wraps it in more symantec code.
 
 **If upgrading, please back up your database first!**
