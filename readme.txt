@@ -20,9 +20,9 @@ You can also set a default twitter username and feed count, which will overwrite
 
 To start you need to enter your username and feed count, then on your single.php echo out the following code:
 
-<?php echo get_followme(); ?>
+&lt;?php echo get_followme(); ?&gt;
 
-<?php echo getLatestTweetWP(); ?>
+&lt;?php echo getLatestTweetWP(); ?&gt;
 
 **WP Author's Tweets updates?**
 
@@ -40,13 +40,21 @@ Please visit the [WP Author's Tweets plugin page](http://www.webdesigncreare.co.
 
 == Changelog ==
 
+= 0.2 =
+* Links up hashtags to Twitter search
+* added wp_tweets_text class to feed &lt;p&gt; tag
+* added wp_tweets_date class to tweeted &lt;p&gt; tag
+
 = 0.1 =
 * Fixes bug when mentioning email addresses in Tweets
 * Allows you to add an ID to latest tweet list
-* Tweet content and 'Tweeted' wrapped in <p> tags
+* Tweet content and 'Tweeted' wrapped in &lt;p&gt; tags
 * Ability to change 'Tweeted" text 
 
 == Upgrade Notice ==
+
+= 0.2 =
+This minor update links up hashtags to Twitter search and adds classes to content and tweeted &lt;p&gt; tags.
 
 = 0.1 =
 This version allows you to customise the latest tweet feed slightly more and wraps it in more symantec code.

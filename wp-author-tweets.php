@@ -6,7 +6,7 @@
 Plugin Name: WP Author's Tweets
 Plugin URI: http://www.webdesigncreare.co.uk/blog/videos/wp-author-tweets.html
 Description: Gives you the ability to add your Twitter username to Author profile and display latest tweets.
-Version: 1.1
+Version: 1.2
 Author: Creare Communications Ltd
 Author URI: http://www.webdesigncreare.co.uk
 License: GPL2
@@ -109,11 +109,12 @@ function getLatestTweetWP() {
 						$descriptiondata = preg_replace_callback('|http://([a-z0-9?\-_./=%#]{1,500})|i', 'shorten_url', $descriptiondata); 
 						// $descriptiondata = preg_replace('/@(\w+)/', '@<a rel="nofollow" href="http://www.twitter.com/$1" title="Follow $1 on Twitter">$1</a>', $descriptiondata); // use for email link up (mailto:)
 						$descriptiondata = preg_replace('/( @|^@)(\w+)/', '$1<a rel="nofollow" href="http://www.twitter.com/$2" title="Follow $2 on Twitter">$2</a>', $descriptiondata); // fixes the username in an email address problem // Link up @ Links
+						$descriptiondata = preg_replace('/( #|^#)(\w+)/', '$1<a rel="nofollow" href="https://twitter.com/#!/search?q=%23$2" title="$2">$2</a>', $descriptiondata); // links up #hashtags and trends
 				
 				$templateurl = get_bloginfo("template_url"); // Insert RT Icon
 				// $descriptiondata = str_replace('RT', '<span class="rt-icon"><img src="'.get_bloginfo("template_url").'/inc/img/RT.png" height="16" width="16" alt=" " /><span> RT</span></span>', $descriptiondata); // use this when integrate cutom RT icon
-				echo '<li><p> '. $descriptiondata .' </p>'; // echo tweets content
-				echo '<p>'. $tweeted_new .': '.$item->get_date('j.n.y | g:i a') .' </p></li>'; // echo time and date
+				echo '<li><p class="wp_tweet_text"> '. $descriptiondata .' </p>'; // echo tweets content
+				echo '<p ="wp_tweet_date">'. $tweeted_new .': '.$item->get_date('j.n.y | g:i a') .' </p></li>'; // echo time and date
 				endforeach;
 				echo "</ul>"; // closing ul tag
 } ?>
