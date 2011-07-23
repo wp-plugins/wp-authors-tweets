@@ -40,8 +40,15 @@ Please visit the [WP Author's Tweets plugin page](http://www.webdesigncreare.co.
 
 == Changelog ==
 
-We are currently updating the plugin to allow cusotm HTML to wrap the latets tweets.
+= 0.1 =
+* Fixes bug when mentioning email addresses in Tweets
+* Allows you to add an ID to latest tweet list
+* Tweet content and 'Tweeted' wrapped in <p> tags
+* Ability to change 'Tweeted" text 
 
 == Upgrade Notice ==
+
+= 0.1 =
+This version fixes a security related bug.  Upgrade immediately.
 
 **If upgrading, please back up your database first!**
